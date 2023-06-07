@@ -32,5 +32,19 @@ def create_notice(user_id):
 
 
 @bp.route('/user/<user_id>/notices')
-def get_user_notices(<user_id>):
-    
+def get_user_notices(user_id):
+    user = storage.get(User, user_id)
+
+    if not user:
+        abort(404)
+
+    notices = storage.all(Notice)
+    print(notices)
+
+    user_notices = []
+
+    for notice in notices.values():
+        if notice.user_id == user_id:
+            user_notices.append(notice.to_dict())
+
+    return make_response(jsonify(user_notices), 200)
