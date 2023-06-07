@@ -31,7 +31,7 @@ def create_notice(user_id):
     return make_response(jsonify(instance.to_dict()), 201)
 
 
-@bp.route('/user/<user_id>/notices')
+@bp.route('/user/<user_id>/notices', methods=["GET"])
 def get_user_notices(user_id):
     user = storage.get(User, user_id)
 
@@ -48,3 +48,43 @@ def get_user_notices(user_id):
             user_notices.append(notice.to_dict())
 
     return make_response(jsonify(user_notices), 200)
+
+
+@bp.route('/user/<user_id>/<notice_id>/notice', methods=["GET"])
+def get_notice(user_id, notice_id):
+    user = storage.get(User, user_id)
+
+    if not user:
+        abort(404)
+
+    notice = storage.get(Notice, notice_id)
+
+    if not notice:
+        abort(404)
+
+    if user.id != notice.user_id:
+        abort(404)
+
+    return make_response(jsonify(notice.to_dict()), 200)
+
+
+
+@bp.route('/user/<user_id>/<notice_id>/notice', methods=["DELETE"])
+def delete_notice(user_id, notice_id):
+    user = storage.get(User, user_id)
+
+    if not user:
+        abort(404)
+
+    notice = storage.get(Notice, notice_id)
+
+    if not notice:
+        abort(404)
+
+    if user.id != notice.user_id:
+        abort(404)
+    
+    storage.delete(notice)
+    storage.save()
+
+    return make_response(jsonify({}), 200)
