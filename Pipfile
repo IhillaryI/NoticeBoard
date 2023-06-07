@@ -8,6 +8,7 @@ flask = "*"
 sqlalchemy = "*"
 flask-cors = "*"
 mysqlclient = "*"
+gunicorn = "*"
 
 [dev-packages]
 
