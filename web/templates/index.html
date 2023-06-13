@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./static/styles/global.css">
+	<link rel="stylesheet" href="./static/styles/index.css">
+	<title>NoticeBoard home</title>
+</head>
+<body>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+	<div class="container">
+		<h1 class="banner">NoticeBoard</h1>
+		<main>
+			<div class="content">
+				<p>
+					NoticeBoard is a service that makes it easy to create notices.
+					NoticeBoard is a tool that can be used to keep users informed about important events, updates and announcements. With NoticeBoard, you can create notices in minutes and display them on your websites
+				</p>
+				<div class="uses">
+					<h2>Here are just a few of the things you can do with NoticeBoard</h2>
+
+					<div class="alluses">
+
+						<article class="uses">
+							<h3>Create notices</h3>
+							<p>
+								Use NoticeBoard's simple API to create custom text-based notice
+							</p>
+						</article>
+		
+						<article class="uses">
+							<h3>View notices</h3>
+							<p>View all notices you've created on the NoticeBoard website</p>
+						</article>
+		
+						<article class="uses">
+							<h3>Delete notices</h3>
+							<p>Delete any notice you no longer need</p>
+						</article>
+		
+						<article class="uses">
+							<h3>Fetch notices</h3>
+							<p>
+								Use NoticeBoard API to fetch your created notices and display them on your website
+							</p>
+						</article>
+					</div>
+	
+				</div>
+				<div class="benefit">
+					<h2>Additional benefits</h2>
+	
+					<article class="benefits">
+						<h3>Scalability</h3>
+						<p>
+							NoticeBoard is designed to scale with your needs. Whether you have a small team or a large enterprise, NoticeBoard can help you manage your notices efficiently
+						</p>
+					</article>
+					<article class="benefits">
+						<h3>Security</h3>
+						<p>
+							NoticeBoard is commited to protecting your data. We ask only for information pertinent to your use and we don't share or steal your data.
+						</p>
+					</article>
+				</div>
+			</div>
+			<section class="form">
+				<form action="" method="post" id="form">
+					<input id="email" required aria-required="true" type="email" name="email" placeholder="Email" aria-placeholder="Email">
+					<input id="pass" required aria-required="true" type="password" name="password" placeholder="Password" aria-placeholder="Password">
+					<button class="auth" id="login">Login</button>
+					<p class="or">OR</p>
+					<button class="auth" id="register">Register</button>
+					<button class="auth" id="guest">Use as Guest</button>
+				</form>
+			</section>
+		</main>
+	</div>
+	<script src="../static/scripts/index.js"></script>
+</body>
+</html>

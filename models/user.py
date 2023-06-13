@@ -24,5 +24,6 @@ class User(BaseModel, Base):
 
     def __setattr__(self, name, value):
         if name == "password":
-            value = md5(value.encode()).hexdigest()
+            pass
+            #value = md5(value.encode('utf-8')).hexdigest()
         super().__setattr__(name, value)

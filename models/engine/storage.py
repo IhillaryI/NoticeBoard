@@ -68,4 +68,7 @@ class Storage:
             if (value.id == id):
                 return value
 
+    def session(self):
+        return self.__session
+
         return None

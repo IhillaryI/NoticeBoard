@@ -1,0 +1,29 @@
+aside {
+    /* position: fixed; */
+    position: relative;
+}
+aside ul {
+    list-style: none;
+    width: 15%;
+    border-right: 1px solid black;
+    position: fixed;
+}
+
+li {
+    width: 100%;
+}
+
+li + li {
+    margin-block-start: 2rem;
+}
+
+aside li > button {
+    color: #fff;
+    background-color: rgb(241, 204, 39);
+    border: none;
+    padding: 1rem;
+    width: 80%;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    margin-block-end: 2.5rem;
+}
+
+.container {
+    margin-top: 58px;
+    max-width: 90%;
+    margin-inline: auto;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    position: relative;
+}
