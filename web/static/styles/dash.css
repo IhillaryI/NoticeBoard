@@ -20,3 +20,16 @@ h1 {
     grid-template-columns: 1fr 4fr;
     position: relative;
 }
+
+
+h3 {
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 1px;
+}
+
+.api article + article {
+    margin-top: 2rem;
+}
+.api {
+    margin-bottom: 3rem;
+}

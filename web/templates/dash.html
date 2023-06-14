@@ -50,10 +50,53 @@
                 </div>
                 <div class="api">
                     <h2>API</h2>
+                     <article>
+						<h3>Create</h3>
 
-                    <div class="content">
+						<p>
+							To create a notice, make a post request
+						</p>
+						<code>
+							/api/v1/user/{user_id}/notice
+						</code>
+						<p>
+							The post body will be json data
+						</p>
+	
+						<code>
+							{"title": "titel", "text": "text"}
+						</code>
+					</article>
 
-                    </div>
+                    <article>
+						<h3>Read</h3>
+
+						<p>
+							To fetch a single notice
+						</p>
+						<code>
+							/api/v1/user/{user_id}/{notice_id}/notice
+						</code>
+                        
+                        <p>
+                            To fetch all notices by a user
+                        </p>
+
+                        <code>
+                            /api/v1/user/{user_id}/notices
+                        </code>
+					</article>
+
+                    <article>
+						<h3>Delete</h3>
+
+						<p>
+							To delete a notice, make a delete request
+						</p>
+						<code>
+							/api/v1/user/{user_id}/{notice_id}/notice
+						</code>
+					</article>
                 </div>
             </main>
         </div>
