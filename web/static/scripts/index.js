@@ -1,5 +1,3 @@
-console.log("Now you see me")
-
 const register = document.getElementById('register');
 const login = document.getElementById('login');
 const guest = document.getElementById('guest');
