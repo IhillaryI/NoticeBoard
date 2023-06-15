@@ -1,5 +1,7 @@
 # NoticeBoard
 ## Introduction
+![project screenshot](noticeboard_home.png)
+
 This project helps users to create notices. It provides a UI (User Interface) for creating notices and viewing them. It also provides an API (Application Programming Interface) endpoint for doing the same operations that can be done using the UI. Users can then use the provided API to display notices on their respective platforms.
 
 This project is a requirement for the completion of my software engineering Foundations at [ALX](https://alxafrica.com)
