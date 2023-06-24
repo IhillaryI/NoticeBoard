@@ -11,7 +11,7 @@ This project is a requirement for the completion of my software engineering Foun
 [Authors LinkedIn](https://www.linkedin.com/in/ifeanyichukwu-ifeanyichukwu/)
 
 ## Installation
-    git clone https://github.com/IhillaryI/NoticeBoard.git
+    git clone https://github.com/ifeanyiih/NoticeBoard.git
 
 MySQL version 8 needs to be installed
 
